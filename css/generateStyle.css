@@ -64,3 +64,66 @@ display: block;
   background: linear-gradient(to right, black, var(--green));
 
 }
+
+.stats{
+    display:flex;
+    flex-flow:row wrap;
+}
+
+.welcome-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.welcome-section *{
+    text-align: start;
+}
+
+.vision-mission{
+    display:flex !important;
+    gap:20px;
+    
+    }
+    .section-container{
+        display: flex;
+        width: max-content;
+        margin:0 auto;
+        gap:30px;
+        max-width: 100%;;
+    }
+    .section-container >*{
+        max-width:90%;
+    }
+@media (max-width:1025px) {
+    .vision-mission{
+        flex-direction: column!important;
+        gap:30px;
+    }
+    .section-container{
+        display: block;
+    }
+.welcome-section{
+display: block;
+}
+.welcome-section *{
+    text-align: center;
+}
+
+.welcome-section .stats .stat{
+    min-width:90% !important;
+padding: 30px 10px !important;
+height:140px !important;
+}
+
+}
+
+
+.welcome-section .stats .stat{
+    width:180px;
+height:200px;
+padding: 30px 10px !important;
+}
+
+.welcome-section .stats .stat *{
+    text-align: center;
+}
