@@ -1,0 +1,57 @@
+iframe{
+    width:100%;
+    margin:0 auto;
+    max-width:600px;
+    height:90vh;
+    border-radius:5px;
+}
+.game-container{
+    display: flex;
+    justify-content: center;
+}
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button.blum {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color:var(--green);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  border-radius: 20px;
+}
+
+button.blum::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--blue);
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+button.blum:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+button.blum:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}

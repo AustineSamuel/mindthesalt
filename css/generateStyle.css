@@ -4,6 +4,10 @@
     --yellow:#ffc421;
 }
 
+.logo-area {
+    display: flex !important;
+    gap:10px !important;
+}
 .logo-area img{
 width:50px;
 height:50px;
@@ -13,7 +17,13 @@ background-color:white;
 border:2px solid var(--yellow);
 }
 header{
+    position:fixed;
+    width:100%;
+    z-index: 99;
     background:white !important;
+}
+footer *{
+color:rgb(179, 147, 7) !important;
 }
 header *{
     color:#151f2e 
@@ -24,7 +34,7 @@ header a{
     font-size: 18px !important;
 }
 header {
-    padding: 10px 5px;
+    padding: 10px 5px !important;
 }
 .logo-area div span{
 display: block;
@@ -50,7 +60,7 @@ display: block;
         flex-flow:row-reverse row !important;
     }
     header .mobileNav{
-        display:block;
+        display:block !important;
 
     };
 }

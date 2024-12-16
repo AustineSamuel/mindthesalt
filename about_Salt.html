@@ -235,13 +235,53 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./css/generateStyle.css">
 </head>
-<body>
-<header>
-    <div class="logo-area">
-        <img src="images/logo.png" alt="Mind the Salt Logo">
 
-        <span>Less Salt, More Life</span>
+    <link rel="stylesheet" href="./css/menu.css"/>
+<link rel="stylesheet" href="./css/generateStyle.css">
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+<body>
+ <!-- Side Menu -->
+
+
+
+ <nav id="sideMenu" class="side-menu">
+     
+    <ul>
+        <li>
+            <div style="width:100%" class="logo-area">
+                <img class="logo" src="images/logo.png" alt="Mind the Salt Logo">
+                <div>
+                <span>Less Salt</span>
+                <span>More Life</span>
+                <br/>
+                <hr/>
+                </div>
+            </div>
+        </li> <li><a href="index.html">Home</a></li>
+        <li><a href="about_salt.html">About Salt</a></li>
+        <li><a href="reduce_salt.html">Reduce Salt</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li> <a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay">
+  </div>
+
+
+    <header>
+    <div class="logo-area">
+        <img class="logo" src="images/logo.png" alt="Mind the Salt Logo">
+        <div>
+        <span>Less Salt</span>
+        <span>More Life</span>
+        </div>
     </div>
     <nav>
         <a href="index.html">Home</a>
@@ -251,7 +291,14 @@
         <a href="community.html">Community</a>
         <a href="resources.html">Resources</a>
     </nav>
-</header>
+
+    <div class="mobileNav">
+        <button id="menuToggle" aria-label="Open Menu">
+            <i class="fa fa-reorder" ></i>
+
+        </button>
+      </div>
+</header><br/><br/>
 
 <main>
     <h1>Salt: Small Crystals, Big Impact</h1>
@@ -308,4 +355,6 @@
     <p>Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
 </footer>
 </body>
+
+<script src="./js/main.js"></script>
 </html>

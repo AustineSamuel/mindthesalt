@@ -3,8 +3,8 @@
 /* Global Styles */
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: #F9F9F9;
     color: #333;
     line-height: 1.6;
@@ -108,4 +108,76 @@ h2 {
     .cta, main, footer {
         text-align: center;
     }
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+header {
+    /* background-color: #34568B; */
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:16px;
+    box-shadow: 0 4px 36px rgba(140, 140, 143, 0.055);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+header .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #FFD662;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD662;
+}
+
+nav a:hover::after {
+    width: 100%;
 }

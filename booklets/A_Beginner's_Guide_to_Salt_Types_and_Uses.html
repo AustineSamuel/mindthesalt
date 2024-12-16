@@ -161,6 +161,12 @@
     text-decoration: underline;
   }
 </style>
+
+
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+<link href="./style.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -168,9 +174,11 @@
   <h1>A Beginner's Guide to Salt Types and Uses</h1>
   <p>Understanding the Role of Salt Varieties in Flavour and Health</p>
 </header>
-
+<button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
+  <i class="fa fa-reorder"></i>
+</button>
 <div class="container">
-  <aside>
+  <aside class="side-menu" id="sideMenu">
     <h2>Table of Contents</h2>
     <ul>
       <li><a href="#inside-cover">Inside Cover</a></li>
@@ -333,5 +341,6 @@
   <p>This booklet is for educational purposes. For personalized advice, consult a healthcare provider.</p>
 </footer>
 <script src="../js/main.js"></script>
+<script src="./code.js"></script>
 </body>
 </html>

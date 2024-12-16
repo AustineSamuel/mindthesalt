@@ -1,0 +1,68 @@
+.side-menu h2 {
+    padding: 1rem;
+    background-color: #007a33;
+    color: white;
+    margin: 0;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 1rem;
+  }
+  .side-menu{
+    overflow: auto;
+  }
+  .side-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .side-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Toggle Button Styles */
+  .menu-toggle {
+    position: fixed;
+    top: 5px;
+    transform:translate(-10px,0px);
+    background-color: white;
+    color: var(--green);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    z-index: 1100;
+    border-radius: 25px;
+    width:50px;
+    height:50px;
+display: none;
+    right:0 !important;
+  }
+  
+
+
+
+@media (max-width:900px) {
+    .menu-toggle {
+    display: block;
+    }
+  aside{
+    height: 100%;
+    box-shadow: 1px 1px 10px 0px lightgray;
+    position:fixed;
+    top:0;
+    left:0;
+    transition-duration: all;
+    transition-duration: 800ms;
+    transform: translate(-100vw,0px);
+  }
+  aside.active{
+transform: translate(-0vw,0px);
+
+  }
+
+}
+

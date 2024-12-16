@@ -1,12 +1,11 @@
 // main.js - Basic Example Script
+let menuToggle,sideMenu,overlay;
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Website Loaded');
-});
-
-
-const menuToggle = document.getElementById('menuToggle');
-const sideMenu = document.getElementById('sideMenu');
-const overlay = document.getElementById('overlay');
+    
+ menuToggle = document.getElementById('menuToggle');
+ sideMenu = document.getElementById('sideMenu');
+ overlay = document.getElementById('overlay');
 
 // Open and close the side menu
 menuToggle.addEventListener('click', () => {
@@ -19,3 +18,6 @@ overlay.addEventListener('click', () => {
   sideMenu.classList.remove('active');
   overlay.classList.remove('active');
 });
+
+});
+
