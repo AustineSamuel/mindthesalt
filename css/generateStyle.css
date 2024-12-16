@@ -1,0 +1,66 @@
+:root{
+    --blue:#0749b4;
+    --green:#599c00;
+    --yellow:#ffc421;
+}
+
+.logo-area img{
+width:50px;
+height:50px;
+min-height:50px;
+border-radius: 25px;
+background-color:white;
+border:2px solid var(--yellow);
+}
+header{
+    background:white !important;
+}
+header *{
+    color:#151f2e 
+    !important;
+}
+
+header a{
+    font-size: 18px !important;
+}
+header {
+    padding: 10px 5px;
+}
+.logo-area div span{
+display: block;
+}
+.logo-area div span:nth-child(1){
+    font-size:14px;
+    color:#ceb008 !important;
+
+
+}
+.logo-area div span:nth-child(2){
+    color:#61a700 !important;
+    font-size:smaller;
+    font-family: cursive;
+}
+
+@media (max-width:900px){
+    header nav{
+        display:none;
+    }
+    header {
+        flex-direction: row !important;
+        flex-flow:row-reverse row !important;
+    }
+    header .mobileNav{
+        display:block;
+
+    };
+}
+
+.main-banner .cta-buttons a{
+    border-radius: 30px !important;
+
+}
+
+.main-banner .cta-buttons a:nth-child(2){
+  background: linear-gradient(to right, black, var(--green));
+
+}

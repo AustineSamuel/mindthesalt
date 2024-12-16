@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Mind the Salt</title>
+<link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            color: #333;
+            overflow-x: hidden;
+        }
+         header {
+            background-color: #34568B;
+            color: #FFFFFF;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            animation: slideDown 1s ease;
+
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+        header nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #FFD662;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        header nav a:hover::after {
+            width: 100%;
+        }
+        header nav a:hover {
+            color: #FFD662;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        h1 {
+            color: #34568B;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        section h2 {
+            color: #34568B;
+            margin-bottom: 15px;
+        }
+        section ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+        section ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        section ul li span {
+            font-weight: bold;
+            color: #34568B;
+        }
+        .highlight {
+            background-color: #FFD662;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta a {
+            display: inline-block;
+            background-color: #FFD662;
+            padding: 12px 25px;
+            border-radius: 5px;
+            color: #34568B;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .cta a:hover {
+            background-color: #FFA500;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #34568B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        footer a {
+            color: #FFD662;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo-area">
+        <img src="images/logo.png" alt="Mind the Salt Logo">
+
+        <span>Less Salt, More Life</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about_salt.html">About Salt</a>
+        <a href="reduce_salt.html">Reduce Salt</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="community.html">Community</a>
+        <a href="resources.html">Resources</a>
+    </nav>
+</header>
+
+
+    <main>
+        <h1>Join the Mind the Salt Community</h1>
+        <p>Welcome to the Mind the Salt Community—a space where we connect, learn, and support each other on the journey to healthier living. Share your experiences, ask questions, and get inspired by others who are embracing low-salt lifestyles.</p>
+
+        <section>
+            <h2>Why Join Our Community?</h2>
+            <ul>
+                <li><span>Support & Motivation:</span> Share your challenges and successes with like-minded people.</li>
+                <li><span>Expert Advice:</span> Access tips and insights from healthcare professionals and culinary experts.</li>
+                <li><span>Inspiration:</span> Discover new recipes, low-salt tips, and stories from around the world.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Community Features</h2>
+            <ul>
+                <li><span>Peer Support Groups:</span> Join groups based on your needs, such as parents cooking low-salt meals for kids or seniors managing high blood pressure.</li>
+                <li><span>Monthly Challenges:</span> Participate in fun challenges like "Cook 5 low-salt meals this week" and earn digital badges.</li>
+                <li><span>Forums & Discussions:</span> Engage in lively discussions on popular topics like "Low-salt snack ideas" or "Best herbs for flavourful meals."</li>
+                <li><span>Live Q&A Sessions:</span> Get answers to your questions directly from nutritionists, chefs, and health professionals.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Community Stories</h2>
+            <p><strong>Spotlight: John&rsquo;s Journey to Better Health</strong></p>
+            <blockquote>
+                "I used to rely on processed foods, and my blood pressure was out of control. With the help of Mind the Salt&rsquo;s recipes and community, I&rsquo;ve reduced my sodium intake and feel better than ever!"
+            </blockquote>
+            <p>Do you have a story to share? Submit your experience for a chance to be featured.</p>
+            <div class="cta">
+                <a href="share-story.html">Share Your Story</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>How to Join</h2>
+            <p>Joining the community is easy:</p>
+            <ol>
+                <li>Sign up for an account.</li>
+                <li>Participate in discussions, challenges, and live events.</li>
+                <li>Contribute by sharing your insights, recipes, and experiences.</li>
+            </ol>
+            <div class="cta">
+                <a href="signup.html">Join the Community Now</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Interactive Features</h2>
+            <ul>
+                <li><span>Recipe Sharing:</span> Upload your favourite low-salt recipes to inspire others.</li>
+                <li><span>Polls & Surveys:</span> Participate in polls like "What&rsquo;s the hardest food to cut salt from?"</li>
+                <li><span>Volunteer Opportunities:</span> Join local and global efforts to promote heart health and low-salt living.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Mind the Salt. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+        </footer>
+    </main>
+</body>
+<script src="../js/main.js"></script>
+</html>

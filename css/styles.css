@@ -1,0 +1,111 @@
+/* styles.css - General Styles for Your Website */
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #34568B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+a {
+    color: #FFD662;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #34568B;
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px; /* Fixed height */
+    width: auto; /* Maintain aspect ratio */
+    max-height: 50px; /* Prevent exceeding height */
+    max-width: 150px; /* Optional limit */
+    display: inline-block;
+    margin: 0 auto; /* Centers the logo */
+}
+
+/* Responsive Design for Tablets and Mobiles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p, ul li {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    header nav a {
+        margin: 0;
+    }
+
+    /* Adjust logo size for tablets */
+    .logo {
+        height: 40px;
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Adjust logo size for small devices */
+    .logo {
+        height: 30px;
+        max-height: 30px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .cta, main, footer {
+        text-align: center;
+    }
+}

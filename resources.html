@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Mind the Salt</title>
+<link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #34568B;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+        header nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #FFD662;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        header nav a:hover::after {
+            width: 100%;
+        }
+        header nav a:hover {
+            color: #FFD662;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            color: #34568B;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        section h2 {
+            color: #34568B;
+            margin-bottom: 15px;
+        }
+        ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        ul li span {
+            font-weight: bold;
+            color: #34568B;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta a {
+            display: inline-block;
+            background-color: #FFD662;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #34568B;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .cta a:hover {
+            background-color: #FFA500;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #34568B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        footer a {
+            color: #FFD662;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo-area">
+        <img class="logo" src="images/logo.png" alt="Mind the Salt Logo">
+
+
+        <span>Less Salt, More Life</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about_salt.html">About Salt</a>
+        <a href="reduce_salt.html">Reduce Salt</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="community.html">Community</a>
+        <a href="resources.html">Resources</a>
+    </nav>
+</header>
+
+
+
+    <main>
+        <h1>Your Ultimate Toolkit for a Healthier Lifestyle</h1>
+        <p>Explore expert-curated guides, practical tips, and engaging tools to help you take control of your salt intake and improve your health.</p>
+
+       <section>
+    <h2>Educational Booklets</h2>
+    <ul>
+        <li><span>Reducing Salt Intake: A Simple Guide for People of African Descent in the UK:</span> 
+            Learn about the impact of salt on health in the African diaspora and culturally sensitive ways to reduce salt without losing flavour. 
+            <a href="booklets/Reducing_Salt_Intake_A_Simple_Guide_for_People_of_African_Descent_in_the_UK.html">Read More</a>.
+        </li>
+        <li><span>The Basics of Sodium and Health:</span> 
+            A beginner-friendly overview of sodium’s role in the body and strategies to cut back. 
+            <a href="booklets/The_Basics_of_Sodium_and_Health.html">Read More</a>.
+        </li>
+        <li><span>Sodium and Kids: A Guide for Parents:</span> 
+            Tailored advice for reducing sodium in children’s diets while ensuring they grow healthy. 
+            <a href="booklets/Sodium_and_Kids_A_Comprehensive_Guide.html">Read More</a>.
+        </li>
+        <li><span>A Beginner's Guide to Salt Types and Uses:</span> 
+            Explore different types of salt, their uses, and low-sodium substitutes. 
+            <a href="booklets/A_Beginner's_Guide_to_Salt_Types_and_Uses.html">Read More</a>.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Interactive Storybooks</h2>
+    <ul>
+        <li><span>Salt Busters: A Healthy Food Adventure:</span> 
+            Follow Safi, Tayo, and Baba on a fun mission to reduce salt and make healthier choices. This engaging comic-style story is perfect for children learning about nutrition. 
+            <a href="story_book/Salt_Busters_ A_Healthy_Food_Adventure..html">Read More</a>.
+        </li>
+    </ul>
+</section>
+
+</section>
+        <section>
+            <h2>Tools for Reducing Sodium</h2>
+            <ul>
+                <li><span>Salt Reduction Checklist:</span> Easy swaps and tips to cut sodium without sacrificing taste. <a href="salt-checklist.html">Download Printable Tools</a></li>
+                <li><span>Herb and Spice Pairing Guide:</span> Discover natural flavour boosters for every dish. <a href="spice-guide.html">Download Printable Tools</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Research & Insights</h2>
+            <p style="margin-bottom: 20px;">Explore the latest research and expert insights into sodium and its effects on health:</p>
+            <ul>
+                <li><a href="https://www.who.int/news-room/fact-sheets/detail/salt-reduction" target="_blank">WHO: Salt Reduction Strategies</a> – A detailed overview of global initiatives to reduce sodium consumption.</li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7683534/" target="_blank">Study on Salt and Cardiovascular Health</a> – Insights into how sodium impacts cardiovascular risks.</li>
+                <li><a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003882" target="_blank">Reducing Salt in Processed Foods</a> – The role of food manufacturing in sodium intake.</li>
+                <li><a href="https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.121.18012" target="_blank">Salt Sensitivity and Hypertension</a> – A study on salt sensitivity in different populations.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Interactive Learning</h2>
+            <ul>
+                <li><span>Salt Awareness Quiz:</span> Test your knowledge about hidden sodium sources. <a href="quiz.html">Take the Quiz</a></li>
+                <li><span>Workshops & Webinars:</span> Join engaging events with experts. <a href="webinars.html">Register for Events</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Community Resources</h2>
+            <ul>
+                <li><span>Forum Discussions:</span> Share tips, ask questions, and connect with others reducing sodium. <a href="community.html">Join the Discussion</a></li>
+                <li><span>Volunteer Opportunities:</span> Help spread awareness about low-sodium living in your community. <a href="volunteer.html">Get Involved</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Quick Stats</h2>
+            <ul>
+                <li>75% of dietary sodium comes from processed foods, not the saltshaker.</li>
+                <li>Reducing sodium by 1 teaspoon daily lowers heart disease risk by 20%.</li>
+                <li>Children’s sodium needs are much lower than adults’, making early education crucial.</li>
+                <li>High sodium intake contributes to approximately 3 million deaths annually worldwide.</li>
+                <li>Replacing 30% of dietary salt with herbs can reduce sodium intake without compromising flavour.</li>
+                <li>Over 1 billion people globally have hypertension, many due to high sodium diets.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Mind the Salt. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+        </footer>
+    </main>
+<script src="../js/main.js"></script>
+</body>
+</html>

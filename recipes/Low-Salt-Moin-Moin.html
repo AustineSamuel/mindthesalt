@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low-Salt Moin Moin Recipe</title>
+<link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            color: #333;
+        }
+        header {
+            background-color: #FFA07A;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s;
+        }
+        h1 {
+            color: #FFA07A;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+            list-style: square;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .back-link a {
+            color: #FFA07A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .highlight {
+            background-color: #FFD662;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .animated-text {
+            color: #FFA07A;
+            animation: colorChange 4s infinite;
+        }
+        @keyframes colorChange {
+            0% { color: #FFA07A; }
+            50% { color: #FFD662; }
+            100% { color: #FFA07A; }
+        }
+        .recipe-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Low-Salt Moin Moin Recipe</h1>
+    </header>
+
+    <main>
+        <h1 class="animated-text">Low-Salt Moin Moin</h1>
+        <p class="highlight">Moin Moin is a flavourful Nigerian steamed bean pudding that is traditionally rich in proteins and versatile in serving options. This version retains its delightful flavours while being mindful of sodium intake.</p>
+
+        <section class="image-section">
+            <img src="moin-moin-placeholder.jpg" alt="Low-Salt Moin Moin" class="recipe-image">
+        </section>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups black-eyed peas, soaked overnight and skins removed - the main ingredient.</li>
+            <li>1 large onion, chopped - adds a base flavour.</li>
+            <li>1 red bell pepper, deseeded and chopped - contributes sweetness and colour.</li>
+            <li>1 green bell pepper, deseeded and chopped - adds freshness and contrast.</li>
+            <li>1 Scotch bonnet pepper (optional), deseeded and chopped - for authentic heat; adjust to taste.</li>
+            <li>2 cloves of garlic, minced - enhances depth.</li>
+            <li>1 teaspoon ground crayfish (optional) - adds a unique flavour, commonly used in Nigerian cooking.</li>
+            <li>1 teaspoon turmeric - for colour and its anti-inflammatory properties.</li>
+            <li>1/2 teaspoon ground cumin - gives a warm, earthy note.</li>
+            <li>1 tablespoon olive oil - for moisture and richness.</li>
+            <li>Water - enough to blend the mixture to a pourable consistency.</li>
+            <li>Banana leaves or foil - for wrapping the pudding.</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li><span class="highlight">Prepare the Bean Mixture:</span> Drain the soaked black-eyed peas and rub them between your hands or in a towel to remove as much of the skins as possible. In a blender, combine the skinned black-eyed peas, onion, red and green bell peppers, Scotch bonnet pepper, and garlic. Add just enough water to facilitate blending. Blend until smooth.</li>
+            <li><span class="highlight">Mix the Seasonings:</span> Transfer the blended mixture to a large bowl. Stir in the ground crayfish (if using), turmeric, cumin, and olive oil. Mix thoroughly to ensure even distribution of spices.</li>
+            <li><span class="highlight">Wrap the Pudding:</span> Prepare your steaming vessel by bringing water to a simmer. If using banana leaves, scald them briefly in hot water to make them pliable. Cut into rectangles large enough to hold a few tablespoons of the bean mixture. Alternatively, prepare squares of aluminum foil. Spoon the bean mixture into the leaves or foil and fold securely, ensuring the mixture is well contained.</li>
+            <li><span class="highlight">Steam the Moin Moin:</span> Place the wrapped puddings in a steamer basket or on a rack above the simmering water in a covered pot. Steam for about 1 to 1.5 hours, or until the Moin Moin feels firm and has solidified. The cooking time may vary depending on the size of the puddings.</li>
+            <li><span class="highlight">Serve:</span> Allow the Moin Moin to cool slightly before unwrapping. It can be served warm or at room temperature. Moin Moin is versatile and can be enjoyed on its own, with a side of rice, or as part of a larger meal.</li>
+        </ol>
+
+        <div class="back-link">
+            <a href="recipes.html">&#8592; Back to Recipes</a>
+        </div>
+    </main>
+<script src="../js/main.js"></script>
+</body>
+</html>

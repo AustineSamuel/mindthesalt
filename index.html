@@ -1,0 +1,630 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Mind the Salt - Home</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="./css/generateStyle.css">
+    <style>
+        /* Color Palette:
+           Primary: #34568B (Blue)
+           Accent: #FFD662 (Golden Yellow), #FFA500 (Orange), #88B04B (Green)
+           Background: #FAFAFA (Light Grey)
+           Text: #333333 (Dark Grey)
+           White: #FFFFFF
+        */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            color: #333333;
+            overflow-x: hidden;
+        }
+
+        header {
+            /* background-color: #34568B; */
+            color: #FFFFFF;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap:16px;
+            box-shadow: 0 4px 36px rgba(140, 140, 143, 0.055);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            animation: slideDown 1s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: #FFD662;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFD662;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .main-banner {
+            background: linear-gradient(to bottom, #ffffff, #ffeccf,#f5a209);
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 2s ease forwards;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .main-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #aa6f00 10%, transparent 10%),
+                        radial-gradient(circle, #FFD662 10%, transparent 10%);
+            background-size: 50px 50px;
+            animation: rotatePattern 20s linear infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes rotatePattern {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .main-banner h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  transform: translateY(-20px);
+  animation: bounceDown 1s ease forwards;
+
+  /* Gradient Animation */
+  background: linear-gradient(to right, black, var(--yellow));
+  background-size: 200% 100%; /* Makes the gradient larger for animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation for gradient movement */
+  animation: animateGradient 3s linear infinite;
+}
+
+/* Keyframes for animating the gradient */
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 100%;
+  background: linear-gradient(to right, black, var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  }
+  100% {
+    background-position: 100% 0%;
+  background: linear-gradient(to right, black, var(--green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  }
+}
+
+
+        @keyframes bounceDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            50% { transform: translateY(10px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        .main-banner p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #333333;
+            animation: fadeSlideUp 1.5s ease forwards;
+        }
+
+        @keyframes fadeSlideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .main-banner .cta-buttons a {
+            background-color: #34568B;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .main-banner .cta-buttons a:hover {
+            background-color: #FFD662;
+            color: #333333;
+            transform: scale(1.05);
+        }
+
+        .welcome-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: #FAFAFA;
+        }
+
+        .welcome-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #34568B;
+            animation: fadeInDown 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .welcome-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Stats Section Improvements */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            animation: slideIn 2s;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Add glowing and rotating animation to stats */
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 10px #FFD662; transform: rotate(0deg); }
+            50% { box-shadow: 0 0 20px #FFA500; transform: rotate(5deg); }
+            100% { box-shadow: 0 0 10px #FFD662; transform: rotate(0deg); }
+        }
+
+        .stat {
+            text-align: center;
+            background-color: #FFD662;
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            transition: transform 0.3s ease;
+            animation: glowPulse 3s infinite alternate ease-in-out;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .stat h3 {
+            font-size: 28px;
+            color: #34568B;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            font-size: 18px;
+        }
+
+        /* Add more stats */
+        /* Example extra stats: */
+        /* We'll just add them in HTML below. */
+
+        .about-us {
+            background: #FFF;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .about-us h2 {
+            font-size: 36px;
+            color: #34568B;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .about-us p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .vision-mission {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .vision-mission div {
+            background: #FAFAFA;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity:0; }
+            to { transform: translateY(0); opacity:1; }
+        }
+
+        .vision-mission h3 {
+            font-size: 28px;
+            color: #34568B;
+            margin-bottom: 15px;
+        }
+
+        .vision-mission p {
+            font-size: 18px;
+        }
+
+        .phd-project {
+            background: #EEE;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .phd-project h2 {
+            color: #34568B;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .phd-project p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .interactive-section {
+            background-color: #88B04B;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 50px 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .interactive-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .interactive-section p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .interactive-section a {
+            background-color: #FFFFFF;
+            color: #34568B;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .interactive-section a:hover {
+            background-color: #FFD662;
+            transform: scale(1.05);
+        }
+
+        .educational-section {
+            background-color: #FFD662;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .educational-section h2 {
+            font-size: 36px;
+            color: #34568B;
+            margin-bottom: 20px;
+        }
+
+        .educational-section p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        .educational-section a {
+            background-color: #34568B;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .educational-section a:hover {
+            background-color: #FFFFFF;
+            color: #34568B;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #34568B;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #FFD662;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        form input {
+            padding: 10px;
+            border: 1px solid #DDD;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #FFD662;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #FFA500;
+        }
+
+        @media(max-width: 600px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            .vision-mission {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<!-- <link rel="stylesheet" href='./fontawesome/css/all.css'/> -->
+<link rel="stylesheet" href="./css/menu.css"/>
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+<body>
+ <!-- Side Menu -->
+
+
+
+ <nav id="sideMenu" class="side-menu">
+     
+    <ul>
+        <li>
+            <div style="width:100%" class="logo-area">
+                <img class="logo" src="images/logo.png" alt="Mind the Salt Logo">
+                <div>
+                <span>Less Salt</span>
+                <span>More Life</span>
+                <br/>
+                <hr/>
+                </div>
+            </div>
+        </li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay">
+  </div>
+
+
+    <header>
+    <div class="logo-area">
+        <img class="logo" src="images/logo.png" alt="Mind the Salt Logo">
+        <div>
+        <span>Less Salt</span>
+        <span>More Life</span>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about_salt.html">About Salt</a>
+        <a href="reduce_salt.html">Reduce Salt</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="community.html">Community</a>
+        <a href="resources.html">Resources</a>
+    </nav>
+
+    <div class="mobileNav">
+        <button id="menuToggle" aria-label="Open Menu">
+            <i class="fa fa-reorder" ></i>
+
+        </button>
+      </div>
+</header>
+    <div class="main-banner">
+        <h1>Welcome to Mind the Salt</h1>
+        <p>Discover simple ways to reduce salt without losing flavour.</p>
+        <div class="cta-buttons">
+            <a href="#get-started">Get Started</a>
+            <a href="recipes.html">Explore Recipes</a>
+        </div>
+    </div>
+    <section class="welcome-section">
+        <h2>Why Choose Mind the Salt?</h2>
+        <p>Salt is everywhere—in our meals, snacks, and drinks. Too much salt can harm your heart and health. At Mind the Salt, we make healthier choices easy, delicious, and fun. Together, we’ll keep flavour while protecting your well-being.</p>
+        <div class="stats">
+            <div class="stat">
+                <h3>1 in 3</h3>
+                <p>too much salt daily</p>
+            </div>
+            <div class="stat">
+                <h3>3 Weeks</h3>
+                <p>taste buds adapt</p>
+            </div>
+            <div class="stat">
+                <h3>Lower BP</h3>
+                <p>cut salt, improve health</p>
+            </div>
+            <div class="stat">
+                <h3>75%</h3>
+                <p>of salt from processed foods</p>
+            </div>
+            <div class="stat">
+                <h3>2g/day</h3>
+                <p>WHO recommended limit</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-us" id="about-us">
+        <h2>About Us</h2>
+        <p>Mind the Salt is a health education initiative dedicated to helping communities—especially those of African descent—understand the impact of salt and how to enjoy meals with less sodium. We provide practical tips, culturally relevant advice, and fun activities to empower families to take charge of their health.</p>
+        <div class="vision-mission">
+            <div>
+                <h3>Our Vision</h3>
+                <p>We imagine a world where everyone can savour the natural flavours of their foods while keeping their hearts and bodies strong. By embracing knowledge and making small changes, communities can enjoy balanced meals and healthier futures.</p>
+            </div>
+            <div>
+                <h3>Our Mission</h3>
+                <p>We strive to deliver accessible, culturally sensitive information on salt reduction. Through interactive tools, engaging stories, and actionable advice, we inspire individuals and families to reduce salt, embrace fresh ingredients, and protect their health.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="phd-project">
+        <h2>Part of a PhD Project</h2>
+        <p>This initiative stems from the doctoral research of <strong>Jesse Enebi Usman</strong> at Sheffield Hallam University. Supported by the university, Jesse’s work focuses on improving health outcomes through education, ensuring underserved communities have the resources to make better dietary choices. Your journey to lower salt is part of a broader mission to enhance equity in healthcare.</p>
+    </section>
+
+    <section class="interactive-section">
+        <h2>Take the Mind the Salt Quiz!</h2>
+        <p>Test your salt savvy! Challenge yourself with our trivia, learn fun facts, and discover easy ways to cut down on sodium while keeping your meals tasty and exciting.</p>
+        <a href="#play-quiz">Play the Game</a>
+    </section>
+
+    <section class="educational-section">
+        <h2>The Truth About Salt</h2>
+        <p>Salt influences your heart, brain, and kidneys. Understanding its effects helps you manage your intake. Mind the Salt guides you in using herbs, spices, and citrus for bold flavours without reliance on salt. Knowledge is power—let’s embrace a healthier, more vibrant way of eating.</p>
+        <a href="#learn-more">Learn More About Salt</a>
+    </section>
+
+    <footer>
+    <p>&copy; 2024 Mind the Salt. 
+        <a href="legal/privacy_policy.html">Privacy Policy</a> | 
+        <a href="legal/terms_and_conditions.html">Terms & Conditions</a> | 
+        <a href="legal/disclaimer.html">Disclaimer</a> | 
+        <a href="legal/copyright_notice.html">Copyright Notice</a>
+    </p>
+    <p>Follow us: 
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </p>
+    <p>Subscribe for tips, recipes, and updates!</p>
+    <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Sign Up</button>
+    </form>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../js/main.js"></script>
+</body>
+</html>
