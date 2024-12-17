@@ -44,10 +44,18 @@ display: none;
   
 
 
-
+  .header_mobile{
+    display:none;
+  }
 @media (max-width:900px) {
     .menu-toggle {
     display: block;
+    }
+    header{
+      display:none !important;
+    }
+    .header_mobile{
+      display:block;
     }
   aside{
     height: 100%;
