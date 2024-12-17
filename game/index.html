@@ -1,92 +1,103 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="/fontawesome/css/all.css">
-<link rel="shortcut icon" href="/images/logo-.png" type="image/x-icon">
+<head>
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="/images/logo-.png" type="image/x-icon">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <title>Mind the salt game</title>
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="../css/generateStyle.css">
-
-<!-- <link rel="stylesheet" href='./fontawesome/css/all.css'/> -->
-<link rel="stylesheet" href="../css/menu.css"/>
-<link rel="stylesheet" href="../css/generateStyle.css">
-<link 
-  href="/fontawesome/css/all.css" 
-  rel="stylesheet"  type='text/css'>
-<link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind the Salt Game</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/generateStyle.css">
+    <link rel="stylesheet" href="../css/menu.css"/>
+    <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./style.css">
+</head>
 <body>
- <!-- Side Menu -->
-
-
-
-
- <nav id="sideMenu" class="side-menu">
-     
-    <ul>
-        <li>
-            <div style="width:100%" class="logo-area">
-                <img class="logo" src="../images/logo.png" alt="Mind the Salt Logo">
-                <div>
-                <span>Less Salt</span>
-                <span>More Life</span>
-                <br/>
-                <hr/>
+    <!-- Side Menu -->
+    <nav id="sideMenu" class="side-menu">
+        <ul>
+            <li>
+                <div style="width:100%" class="logo-area">
+                    <img class="logo" src="../images/logo.png" alt="Mind the Salt Logo">
+                    <div>
+                        <span>Less Salt</span>
+                        <span>More Life</span>
+                        <br/>
+                        <hr/>
+                    </div>
                 </div>
-            </div>
-        </li> <li><a href="/index.html">Home</a></li>
-        <li><a href="/about_Salt.html">About Salt</a></li>
-        <li><a href="/reduce_salt.html">Reduce Salt</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="/community.html">Community</a></li>
-        <li> <a href="/resources.html">Resources</a></li>
-    </ul>
-  </nav>
-
-  <!-- Overlay -->
-  <div id="overlay" class="overlay">
-  </div>
-
-
-    <header>
-    <div class="logo-area">
-        <img class="logo" src="../images/logo.png" alt="Mind the Salt Logo">
-        <div>
-        <span>Less Salt</span>
-        <span>More Life</span>
-        </div>
-    </div>
-    <nav>
-        <a href="/index.html">Home</a>
-        <a href="/about_Salt.html">About Salt</a>
-        <a href="/reduce_salt.html">Reduce Salt</a>
-        <a href="/recipes.html">Recipes</a>
-        <a href="/community.html">Community</a>
-        <a href="/resources.html">Resources</a>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about_Salt.html">About Salt</a></li>
+            <li><a href="/reduce_salt.html">Reduce Salt</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="/community.html">Community</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+        </ul>
     </nav>
 
-    <div class="mobileNav">
-        <button id="menuToggle" aria-label="Open Menu">
-            <i class="fa fa-reorder" ></i>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
 
-        </button>
-      </div>
-</header><br/><br/>
-<br/><br>
+    <header>
+        <div class="logo-area">
+            <img class="logo" src="../images/logo.png" alt="Mind the Salt Logo">
+            <div>
+                <span>Less Salt</span>
+                <span>More Life</span>
+            </div>
+        </div>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/about_Salt.html">About Salt</a>
+            <a href="/reduce_salt.html">Reduce Salt</a>
+            <a href="/recipes.html">Recipes</a>
+            <a href="/community.html">Community</a>
+            <a href="/resources.html">Resources</a>
+        </nav>
 
-<div class='game-container'>
-      <iframe src="https://salt-travia.vercel.app/" >
+        <div class="mobileNav">
+            <button id="menuToggle" aria-label="Open Menu">
+                <i class="fa fa-reorder"></i>
+            </button>
+        </div>
+    </header>
+    <br/><br/>
 
-      </iframe>
-    </div>
-<div class="flexCenter" style="padding:10px">
-    <button class='blum' onclick="alert('Download not available right now')">Download Game</button>
+    <div class="game-container" style="position: relative; text-align: center; ">
+        <!-- iFrame -->
+         <div style="width:100%;height:90vh">
+        <iframe id="gameIframe" style='border:none;outline:none' src="https://salt-travia.vercel.app/" 
+            style="width: 90%; height: 500px; border: none;" allowfullscreen>
+        </iframe>
+           <!-- Fullscreen Button -->
+           <!-- <div class="flexCenter" style="margin-top: 10px; position:absolute">
+          
+        </div> -->
 </div>
+     
+    </div>
 
-<br/>
-<br/>
-<br/>
+    <br/>
 
-<script src="../js/main.js"></script>
+    <div class="flexCenter" style="padding:10px;gap:10px">
+        <button id="fullscreenBtn" class="blum">Enter Fullscreen</button>  <button class='blum' onclick="alert('Download not available right now')">Download Game</button>
+    </div>
+
+    <script>
+        const iframe = document.getElementById('gameIframe');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        // Function to toggle fullscreen
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                iframe.requestFullscreen();
+                fullscreenBtn.textContent = "Exit Fullscreen";
+            } else {
+                document.exitFullscreen();
+                fullscreenBtn.textContent = "Enter Fullscreen";
+            }
+        });
+    </script>
 </body>
 </html>
