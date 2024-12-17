@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/generateStyle.css">
     <link rel="stylesheet" href="../css/menu.css"/>
     <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../game/style.css">
 </head>
 <body>
     <!-- Side Menu -->
@@ -67,8 +67,8 @@
     <div class="game-container" style="position: relative; text-align: center; ">
         <!-- iFrame -->
          <div style="width:100%;height:90vh">
-        <iframe id="gameIframe" style='border:none;outline:none' src="https://salt-travia.vercel.app/" 
-            style="width: 90%; height: 500px; border: none;" allowfullscreen>
+        <iframe id="gameIframe" style='border:none;outline:none' src="https://community-lilac.vercel.app/" 
+            style="width: 90%; height: 500px; border: none;max-width:1300px" allowfullscreen>
         </iframe>
            <!-- Fullscreen Button -->
            <!-- <div class="flexCenter" style="margin-top: 10px; position:absolute">
@@ -80,24 +80,21 @@
 
     <br/>
 
-    <div class="flexCenter" style="padding:10px;gap:10px">
-        <button id="fullscreenBtn" class="blum">Enter Fullscreen</button>  <button class='blum' onclick="alert('Download not available right now')">Download Game</button>
-    </div>
-
+   
     <script>
-        const iframe = document.getElementById('gameIframe');
-        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        // const iframe = document.getElementById('gameIframe');
+        // const fullscreenBtn = document.getElementById('fullscreenBtn');
 
-        // Function to toggle fullscreen
-        fullscreenBtn.addEventListener('click', () => {
-            if (!document.fullscreenElement) {
-                iframe.requestFullscreen();
-                fullscreenBtn.textContent = "Exit Fullscreen";
-            } else {
-                document.exitFullscreen();
-                fullscreenBtn.textContent = "Enter Fullscreen";
-            }
-        });
+        // // Function to toggle fullscreen
+        // fullscreenBtn.addEventListener('click', () => {
+        //     if (!document.fullscreenElement) {
+        //         iframe.requestFullscreen();
+        //         fullscreenBtn.textContent = "Exit Fullscreen";
+        //     } else {
+        //         document.exitFullscreen();
+        //         fullscreenBtn.textContent = "Enter Fullscreen";
+        //     }
+        // });
     </script>
 </body>
 <script src="/js/main.js"></script>
