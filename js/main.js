@@ -18,6 +18,6 @@ overlay.addEventListener('click', () => {
   sideMenu.classList.remove('active');
   overlay.classList.remove('active');
 });
-document.body.innerHTML=`<h1>This site is currently unavailable`
+// document.body.innerHTML=`<h1>This site is currently unavailable`
 });
 
